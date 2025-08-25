@@ -11,10 +11,10 @@ metadata:
       == "main"
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: test-component
-    appstudio.openshift.io/component: test-component
+    appstudio.openshift.io/application: testrepo-willianr
+    appstudio.openshift.io/component: testrepo-willianr
     pipelines.appstudio.openshift.io/type: build
-  name: test-component-on-push
+  name: testrepo-willianr-on-push
   namespace: user-ns2
 spec:
   params:
@@ -23,7 +23,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: registry-service.kind-registry/test-component:{{revision}}
+    value: quay.io/willianrampazzo-konflux-ci/user-ns2/testrepo-willianr:{{revision}}
   - name: dockerfile
     value: Dockerfile
   pipelineSpec:
